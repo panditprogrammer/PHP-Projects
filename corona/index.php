@@ -9,6 +9,7 @@
     <?php
     include "links/links.php";
     include "css/style.php";
+    include "script/script.php"
     ?>
 
     <title>GO CORONA GO | Panditprogrammer.com</title>
@@ -27,6 +28,9 @@
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="fetch_data.php">corona live status</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#symptoms">corona Symptoms</a>
                 </li>
                 <li class="nav-item">
@@ -43,7 +47,7 @@
 
         </div>
     </nav>
-  
+
 
     <!-- poster ================================ -->
 
@@ -66,8 +70,8 @@
     </div>
 
     <!-- update section ==================================== -->
-    <div class="container">
-        <h1 class="text-uppercase text-center p-3">COVID-19 update</h1>
+    <div class="container-fluid">
+        <h1 class="text-uppercase text-center p-3">COVID-19 live updates world wide</h1>
         <div class="d-flex justify-content-around align-items-center">
             <div class="p-2">
                 <h3 class="counter">3,12,34,778</h3>
@@ -85,6 +89,7 @@
                 <h3 class="counter">178</h3>
                 <p>Death cases</p>
             </div>
+
         </div>
     </div>
 
@@ -328,36 +333,5 @@
 
 </body>
 
-<!-- jquery for case counter  section-->
-
-<script type="text/javascript">
-// countering the cases 
-$('.counter').counterUp({
-    delay: 10,
-    time: 3000
-});
-
-let upbtn = document.getElementById("gotop");
-
-    window.onscroll = function() {
-        scrollbtn();
-    }
-
-    // goto function show or hide
-    function scrollbtn() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            upbtn.style.display = "inline-block";
-        } else {
-            upbtn.style.display = "none";
-        }
-    }
-
-    // go to top function 
-    function gotop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-
-    }
-</script>
 
 </html>
